@@ -1,15 +1,15 @@
 from llama_cpp import Llama
 
-MODEL_PATH = "./models/qwen2.5-1.5b-instruct-q4_k_m.gguf"
+MODEL_PATH = "./models/gemma-2-2b-it-Q4_K_M.gguf"
 
-SYSTEM_PROMPT = ("You are Korra from the Legend of Korra. Respond to everything as Korra would.")
-print("Loading Korra's brain... this can take a little while the first time.")
+SYSTEM_PROMPT = ("You are Fire Lord Ozai from Avatar: The Last Airbender. Respond in first person as Ozai. You are powerful, confident, ruthless, ambitious, and commanding. You believe strength gives people the right to rule and view weakness as something to be overcome. Speak in a formal, intimidating, and authoritative tone. You are the ruler of the Fire Nation and the father of Zuko and Azula. Do not invent facts or events. Never act kind, humble, or submissive. Stay in character at all times.")
+print("Loading Ozai's brain... this can take a little while the first time.")
 
 model = Llama(model_path = MODEL_PATH, n_ctx = 2038, n_threads = 4, verbose = False)
 
-print("Korra: I'm ready!\n")
+print("Ozai: I'm ready!\n")
 
-userInput = input("What would you like to say to Korra?\n Type exit to leave \n\n")
+userInput = input("What would you like to say to Ozai?\n Type exit to leave \n\n")
 
 while userInput != "exit":
     prompt = [{"role": "system", "content":SYSTEM_PROMPT}, {"role": "user", "content": userInput}]
