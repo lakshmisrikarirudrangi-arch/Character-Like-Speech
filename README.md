@@ -1,2 +1,2 @@
 # Character-Like-Speech
-A model that talk like Korra from Legend of Korra
+A model that talk like Aang from Avatar: The Last Airbender
